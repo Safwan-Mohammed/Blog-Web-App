@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 
 export class BlogService {
-  ApiUrl : string = `http://localhost:8000`
+  ApiUrl : string = `https://blog-server-safwan-mohammeds-projects.vercel.app/`
   constructor(private http : HttpClient){}
 
   addBlog(blog : BlogModel) : Observable<any>{

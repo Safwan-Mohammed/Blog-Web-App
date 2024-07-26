@@ -11,7 +11,7 @@ import { MessageService } from 'primeng/api';
 
 export class AuthService {
 
-  ApiUrl : string = `http://localhost:8000`
+  ApiUrl : string = `https://blog-server-safwan-mohammeds-projects.vercel.app/`
   loggedIn = new BehaviorSubject<boolean>(false)
 
   constructor(private http : HttpClient, private router : Router, private messageService : MessageService){
