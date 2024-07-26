@@ -10,6 +10,7 @@ Blog-App is a sophisticated blogging platform developed using cutting-edge web t
 - [Setup and Configuration](#setup-and-configuration)
 - [Known Issues](#known-issues)
 - [Learning Outcomes](#learning-outcomes)
+- [Screenshots](#screenshots)
 
 ## Introduction
 
@@ -75,4 +76,13 @@ Engaging with Blog-App has offered valuable insights into:
 - Service creation and utilization for maintaining application state
 - Understanding event propagation in web applications
 - Secure authentication mechanisms using JWT
+
+## Screenshots
+
+![image](https://github.com/user-attachments/assets/43ec5862-eb1d-4d1e-a927-adc26c72389a)
+![image](https://github.com/user-attachments/assets/2ef298d8-163f-4263-98e1-8edb249f1cc8)
+![image](https://github.com/user-attachments/assets/63f8ccbc-bf23-46db-8203-e4bb7c1df164)
+![image](https://github.com/user-attachments/assets/c6c01142-5d4c-479b-aebe-7f0c26e1446a)
+![image](https://github.com/user-attachments/assets/a6784283-48a5-4080-8778-4df0dbfaecde)
+
 
