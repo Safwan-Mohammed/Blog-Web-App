@@ -1,0 +1,46 @@
+<!-- <div style="background-color: red;"> -->
+  <p-toast position="top-right" key="password-mismatch-toast"/>
+  <p-toast position="top-right" key="user-exists-toast"/>
+  <p-toast position="top-right" key="internal-server-error-toast"/>
+  <p-toast position="top-right" key="success-toast"/>
+<!-- </div> -->
+<form style="display: flex; height: 80vh; align-items: center; justify-content: center;" [formGroup]="SignUpForm" (ngSubmit)="onSubmit()">
+  <div class="container">
+    <div>
+      <h2>{{SignOutLabel}}</h2>
+    </div>
+    <div style="width: 100%;">
+      <div class="inputElement">
+      <label for="email">Email</label>
+      <input type="email" formControlName="email" autocomplete="off" autofocus required>
+      </div>
+      <div style="max-width: 100%; overflow-wrap: break-word; word-break: keep-all;" *ngIf="SignUpForm.get('email')?.invalid && SignUpForm.get('email')?.touched">
+        <span style="font-size: 0.75rem; color: red;" *ngIf="SignUpForm.get('email')?.hasError('required')">Email is required.</span>
+        <span style="font-size: 0.75rem; color: red;" *ngIf="SignUpForm.get('email')?.hasError('email')">Invalid email format.</span>
+      </div>
+    </div>
+    <div style="width: 100%;">
+      <div class="inputElement">
+        <label for="password">Password</label>
+        <input type="password" formControlName="password" autocomplete="off" autofocus required>
+      </div>
+      <div style="max-width: 100%; overflow-wrap: break-word; word-break: keep-all;" *ngIf="SignUpForm.get('password')?.invalid && SignUpForm.get('password')?.touched">
+        <span style="font-size: 0.75rem; color: red;" *ngIf="SignUpForm.get('password')?.hasError('required')">Password is required.</span>
+        <span style="font-size: 0.75rem; color: red;" *ngIf="SignUpForm.get('password')?.hasError('minlength')">Password must be at least 8 characters long.</span>
+      </div>
+    </div>
+    <div style="width: 100%;">
+      <div class="inputElement">
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" formControlName="confirmPassword" autocomplete="off" autofocus required>
+      </div>
+      <div style="max-width: 100%; overflow-wrap: break-word; word-break: keep-all;" *ngIf="SignUpForm.get('confirmPassword')?.invalid && SignUpForm.get('confirmPassword')?.touched">
+        <span style="font-size: 0.75rem; color: red;" *ngIf="SignUpForm.get('confirmPassword')?.hasError('required')">Confirm Your Password.</span>
+        <span style="font-size: 0.75rem; color: red;" *ngIf="SignUpForm.get('confirmPassword')?.hasError('minlength')">Password must be at least 8 characters long.</span>
+      </div>
+    </div>
+    <div class="btnContainer">
+    <button mat-raised-button style="background-color: aquamarine; color: #05051d;" type="submit">Sign Up</button>
+    </div>
+  </div>
+</form>

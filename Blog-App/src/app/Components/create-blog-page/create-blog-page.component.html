@@ -1,0 +1,35 @@
+<p-toast position="top-right" key="blog-added"/>
+<p-toast position="top-right" key="blog-updated"/>
+<p-toast position="top-right" key="blog-exists"/>
+<p-toast position="top-right" key="blog-error"/>
+
+<div class="outerContainer">
+  <div class = "heading">
+    <span *ngIf="editBlog">{{updateBlogLabel}}</span>
+    <span *ngIf="!editBlog">{{createBlogLabel}}</span>
+  </div>
+  <div class="formWrapper">
+    <form [formGroup]="NewBlog" (ngSubmit) = "onSubmit()">
+      <div class="labelWrapper">
+        <label *ngIf="!editBlog" for="title">Add Blog Title</label>
+        <label *ngIf="editBlog" for="title">Update Blog Title</label>
+        <input type="text" autocomplete="off" formControlName="title" autofocus autocapitalize="sentences">
+        <div *ngIf="NewBlog.get('title')?.hasError && NewBlog.get('title')?.touched">
+          <span style="font-size: 1.25rem; color: rgb(241, 90, 90);" *ngIf="NewBlog.get('title')?.hasError('required')">Blog Title is Required</span>
+        </div>
+      </div>
+      <div class="labelWrapper">
+        <label *ngIf="!editBlog" for="content">Add Blog Content</label>
+        <label *ngIf="editBlog" for="content">Update Blog Content</label>
+        <textarea formControlName="content" autocapitalize="sentences"></textarea>
+        <div *ngIf="NewBlog.get('content')?.hasError && NewBlog.get('content')?.touched">
+          <span style="font-size: 1.25rem; color: rgb(241, 90, 90);" *ngIf="NewBlog.get('content')?.hasError('required')">Blog Content is Required</span>
+        </div>
+      </div>
+      <div class="buttonContainer">
+        <button *ngIf="!editBlog" mat-flat-button type="submit" style="background: aquamarine; color: #05051d;">Create Blog</button>
+        <button *ngIf="editBlog" mat-flat-button type="submit" style="background: aquamarine; color: #05051d;">Update Blog</button>
+      </div>
+    </form>
+  </div>
+</div>

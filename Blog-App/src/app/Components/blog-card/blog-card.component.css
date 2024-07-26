@@ -1,0 +1,30 @@
+.card{
+  width: 14rem;
+  height: 10rem;
+  background-color: #222a47;
+  color: aquamarine;
+  border-radius: 6px;
+  padding: 1rem;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  align-items: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  word-break: keep-all;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.card:hover{
+  transition: scale 0.3s ease-in-out;
+  scale: 1.1;
+  box-shadow: aquamarine -1px 1px 8px 1px ;
+}
+
+button:hover{
+  background: rgba(127, 255, 212, 0.434);
+}

@@ -1,0 +1,11 @@
+<div class="card" (click)="displayBlog(blog._id!)">
+  <span>Blog : {{blog.title}}</span>
+  <div style="display: flex; justify-content: space-evenly; width: 100%;" *ngIf="showButtons">
+    <button style="color: yellowgreen;"  mat-icon-button matTooltip="Edit Blog" (click)="editBlog($event)">
+      <mat-icon>edit</mat-icon>
+    </button>
+    <button style="color: red;" mat-icon-button matTooltip="Delete blog" (click)="deleteBlog($event)">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+</div>

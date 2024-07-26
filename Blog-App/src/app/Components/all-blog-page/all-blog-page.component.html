@@ -1,0 +1,13 @@
+<div class="outerContainer">
+  <div class = "heading">
+    <span>{{AllBlogLabel}}</span>
+  </div>
+  <div class="cardContainer">
+    <div *ngFor="let x of blogsArray">
+      <app-blog-card [blog]="x"></app-blog-card>
+    </div>
+    <div *ngIf="blogsArray.length == 0">
+      <h1>No Blogs Yet :&#40;</h1>
+    </div>
+  </div>
+</div>

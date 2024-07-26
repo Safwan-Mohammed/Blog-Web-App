@@ -1,0 +1,54 @@
+.outerContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 85vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  font-size: 1.25rem;
+  border: 2px solid aquamarine;
+  padding: 1.5rem;
+  scale: 1.25;
+  border-radius: 8px;
+  min-width: 18rem;
+  max-width: 18rem;
+}
+
+
+.inputElement{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: flex-start; */
+  gap: 0.25rem;
+  width: 100%;
+}
+
+.mat-mdc-form-field{
+  border: 0;
+  outline: 0;
+}
+
+input[type="email"],
+input[type="password"] {
+  border-radius: 6px;
+  padding: 8px;
+  border: 0;
+  outline: 0;
+}
+
+button{
+  font-size: 1.25rem;
+  width: 100%;
+}
+
+.btnContainer{
+  width: 100%;
+  display: flex;
+}

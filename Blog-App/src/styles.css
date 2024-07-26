@@ -1,0 +1,22 @@
+body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  color: aquamarine;
+  background-color: #05051d;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+::-webkit-scrollbar{
+  width: 0.5rem;
+  background: #05051d;
+}
+
+::-webkit-scrollbar-thumb{
+  background: aquamarine;
+  border-radius: 2rem;
+}

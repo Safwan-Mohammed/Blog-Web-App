@@ -1,0 +1,20 @@
+<p-toast position="top-right" key="success-toast"/>
+
+<div class="outer_container">
+  <div class="logo">BLOG-APP</div>
+  <div class="navLinks">
+    <a routerLink="/" routerLinkActive="active" >HOME</a>
+    <a routerLink="createBlog" routerLinkActive="active">CREATE BLOGS</a>
+    <a routerLink="userBlogs" routerLinkActive="active">MY BLOGS</a>
+  </div>
+  <div class="login">
+    <div *ngIf="!isLoggedIn">
+      <a routerLink="signIn" routerLinkActive="active">
+        <button mat-flat-button style="background-color: aquamarine; color: #05051d;" id="signIn">SIGN IN</button>
+      </a>
+    </div>
+    <div *ngIf="isLoggedIn">
+      <button mat-flat-button style="background-color: aquamarine; color: #05051d;" id="signOut" (click)="toggleLogin()">SIGN OUT</button>
+    </div>
+  </div>
+</div>

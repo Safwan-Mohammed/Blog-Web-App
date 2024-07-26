@@ -1,0 +1,29 @@
+.outerContainer{
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 2.5rem;
+}
+
+.heading{
+  display: flex;
+  text-align: center;
+  margin-left: 2.2rem;
+  font-size: 2.25rem;
+  font-weight: 500;
+  color: white;
+}
+
+.cardContainer{
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 0rem 1rem;
+}

@@ -1,0 +1,36 @@
+<p-toast position="top-right" key="success-toast"/>
+<div class="outerContainer">
+  <form [formGroup]="LoginForm" (ngSubmit)="onSubmit()">
+    <div class="container">
+      <div>
+        <h2>{{SignInLabel}}</h2>
+      </div>
+      <div style="width: 100%;">
+        <div class="inputElement">
+        <label for="email">Email</label>
+        <input type="email" formControlName="email" autocomplete="off" autofocus required>
+        </div>
+        <div style="max-width: 100%; overflow-wrap: break-word; word-break: keep-all;" *ngIf="LoginForm.get('email')?.invalid && LoginForm.get('email')?.touched">
+          <span style="font-size: 0.75rem; color: red;" *ngIf="LoginForm.get('email')?.hasError('required')">Email is required.</span>
+          <span style="font-size: 0.75rem; color: red;" *ngIf="LoginForm.get('email')?.hasError('email')">Invalid email format.</span>
+        </div>
+      </div>
+      <div style="width: 100%;">
+        <div class="inputElement">
+          <label for="password">Password</label>
+          <input type="password" formControlName="password" autocomplete="off" autofocus required>
+        </div>
+        <div style="max-width: 100%; overflow-wrap: break-word; word-break: keep-all;" *ngIf="LoginForm.get('password')?.invalid && LoginForm.get('password')?.touched">
+          <span style="font-size: 0.75rem; color: red;" *ngIf="LoginForm.get('password')?.hasError('required')">Password is required.</span>
+          <span style="font-size: 0.75rem; color: red;" *ngIf="LoginForm.get('password')?.hasError('minlength')">Password must be at least 8 characters long.</span>
+        </div>
+      </div>
+      <div class="btnContainer">
+      <button mat-raised-button style="background-color: aquamarine; color: #05051d;" type="submit">Sign In</button>
+      </div>
+    </div>
+  </form>
+  <div style="font-size: 1.25rem; margin-top: 4rem;">
+    <span>No account yet? <a style="color: aquamarine;" routerLink="/signUp" routerLinkActive="active">Register now</a>.</span>
+  </div>
+</div>
