@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "BlogWebApp",
+  "name": "blog-app-client",
   "builds": [
     {
       "src": "dist/BlogWebApp/browser/**",
