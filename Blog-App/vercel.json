@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "name": "BlogWebApp",
+  "builds": [
+    {
+      "src": "dist/BlogWebApp/browser/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+}
